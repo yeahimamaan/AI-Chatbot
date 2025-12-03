@@ -1,11 +1,12 @@
 body {
     font-family: Bahnschrift, sans-serif;
     margin: 20px;
-    color : white;
-    padding : 10px;
+    color: white;
+    padding: 10px;
     background-color: #1e1e1e;
     line-height: 1.6;
-    font-size: 18px;;
+    font-size: 18px;
+
 }
 
 h1 {
@@ -21,8 +22,51 @@ h2 {
 
 p {
     font-size: 20px;
-    color : white;
+    color: white;
 }
-footer{
+
+footer {
     margin-top: 330px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    border: 3px solid rgb(56, 52, 52);
+    font-family: Bahnschrift, sans-serif;
+}
+
+th,
+td {
+    border: 1px solid rgb(56, 52, 52);
+    padding: 10px;
+    text-align: left;
+}
+
+tr:nth-child(even) {
+    background-color: #252424;
+}
+
+
+@keyframes slideUp {
+    0% {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+table {
+    animation: slideUp 1s ease-out forwards;
+}
+
+th {
+    color: #5dbc95; /* same as your h1 */
+}
+td {
+    color: white;
 }
