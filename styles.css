@@ -65,8 +65,56 @@ table {
 }
 
 th {
-    color: #5dbc95; /* same as your h1 */
+    color: #5dbc95; 
 }
 td {
     color: white;
+}
+
+
+
+.our-goal-text,
+.about-text {
+    background-color: #222121;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid rgb(56, 52, 52);
+    margin-top: 20px;
+    line-height: 1.7;
+    font-size: 18px;
+}
+
+.about-text ul {
+    margin-top: 15px;
+    padding-left: 20px;
+}
+
+.about-text li {
+    margin-bottom: 10px;
+}
+
+h1 {
+    color: #5dbc95;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+
+/* Base class for animated sections */
+.fade-in-section {
+    opacity: 0;
+    animation: fadeInUp 1.2s ease-out forwards;
+}
+
+/* Animation keyframes */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
