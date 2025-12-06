@@ -243,4 +243,9 @@ textarea {
     text-shadow: 0 0 8px #5dbc95;
 }
 
+main, .fade-in-section {
+    padding-top: 80px;
+}
+
+
 
