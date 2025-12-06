@@ -101,13 +101,12 @@ h1 {
 }
 
 
-/* Base class for animated sections */
 .fade-in-section {
     opacity: 0;
     animation: fadeInUp 1.2s ease-out forwards;
 }
 
-/* Animation keyframes */
+
 @keyframes fadeInUp {
     0% {
         opacity: 0;
@@ -118,3 +117,11 @@ h1 {
         transform: translateY(0);
     }
 }
+
+
+.slogan {
+            font-size: 1.2rem;
+            color: #a2a8d3;
+            margin-bottom: 40px;
+            font-style: italic;
+        }
