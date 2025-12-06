@@ -71,8 +71,6 @@ td {
     color: white;
 }
 
-
-
 .our-goal-text,
 .about-text {
     background-color: #222121;
@@ -125,3 +123,90 @@ h1 {
             margin-bottom: 40px;
             font-style: italic;
         }
+
+.form-container {
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: #252424; 
+    padding: 25px 30px;
+    border-radius: 12px;
+    border: 2px solid #5dbc95; 
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+.form-container h2 {
+    text-align: center;
+    color: #5dbc95;
+    margin-bottom: 25px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-top: 15px;
+    color: #5dbc95;
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    border-radius: 8px;
+    border: 1px solid #444;
+    background-color: #1e1e1e;
+    color: white;
+    font-size: 16px;
+    font-family: Bahnschrift, sans-serif;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #5dbc95;
+}
+
+.radio-group {
+    margin-top: 10px;
+}
+
+.radio-group input[type="radio"] {
+    transform: scale(1.2);
+    margin-right: 6px;
+    accent-color: #5dbc95; 
+}
+
+button[type="submit"] {
+    margin-top: 20px;
+    width: 100%;
+    padding: 14px;
+    background-color: #5dbc95;
+    border: none;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    color: black;
+}
+
+button[type="submit"]:hover {
+    background-color: #4aa77f;
+}
+
+
+textarea {
+    resize: none;
+}
+
+.form-intro {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 18px;
+    color: white;
+}
+
