@@ -4,7 +4,103 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ICT Project | Table</title>
+    <title>Artemis - Our Services</title>
     <link rel="stylesheet" href="styles.css">
+
+    <style>
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-top: 30px;
+            padding-bottom: 40px;
+        }
+
+        .service-card {
+            margin: 0 !important;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: default;
+            height: 100%;
+            position: relative;
+        }
+
+        .service-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.7);
+            border-color: #5dbc95;
+            z-index: 10;
+            background-color: #2a2929;
+        }
+
+        .service-card h3 {
+            color: #5dbc95;
+            font-size: 22px;
+            margin-bottom: 10px;
+            border-bottom: 1px solid #5dbc95;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+    </style>
+    </style>
 </head>
+
+<body>
+
+    <div class="fade-in-section">
+        <h1>Our Services</h1>
+
+        <div class="our-goal-text" style="text-align: center;">
+            <p style="font-weight: bold; font-size: 22px;">"Artemis is not only an AI. It is future."</p>
+            <p style="font-size: 18px; margin-top: 10px;">
+                It will help you in many tasks, bridging the gap between human potential and artificial intelligence.
+            </p>
+        </div>
+
+        <div class="services-grid">
+
+            <div class="about-text service-card">
+                <h3>Academic & Research</h3>
+                <ul>
+                    <li><strong>Smart Tutoring:</strong> Adapts to your learning style.</li>
+                    <li><strong>Document Analysis:</strong> Summarizes papers instantly.</li>
+                    <li><strong>Study Companion:</strong> Solves math and logic problems.</li>
+                </ul>
+            </div>
+
+            <div class="about-text service-card">
+                <h3>Creative Engine</h3>
+                <ul>
+                    <li><strong>Generative Writing:</strong> Drafts professional emails.</li>
+                    <li><strong>Idea Storming:</strong> Brainstorms project titles.</li>
+                    <li><strong>Multimodal:</strong> Understands uploaded images.</li>
+                </ul>
+            </div>
+
+            <div class="about-text service-card">
+                <h3>Developer Support</h3>
+                <ul>
+                    <li><strong>Intelligent Coding:</strong> Debugs Python, JS, & C++.</li>
+                    <li><strong>Logic Helper:</strong> Explains discrete structures.</li>
+                    <li><strong>API Integration:</strong> Connects to live data.</li>
+                </ul>
+            </div>
+
+            <div class="about-text service-card">
+                <h3>Productivity</h3>
+                <ul>
+                    <li><strong>Task Automation:</strong> Organizes schedules.</li>
+                    <li><strong>Global Translation:</strong> Accurate language translation.</li>
+                    <li><strong>Secure:</strong> High standard data privacy.</li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
+    <footer>
+        <p style="text-align: center; font-size: 16px; color: #777;">&copy; 2025 Artemis Project</p>
+    </footer>
+
+</body>
+
 </html>
