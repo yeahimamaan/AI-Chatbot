@@ -69,13 +69,40 @@
         </div>
     </div>
 
+    <div id="login-options" class="modal">
+        <div class="modal-content login-options-box">
+         <h2>Continue With</h2>
+
+         <button class="login-method google">Continue with Google</button>
+         <button class="login-method phone">Continue with Phone</button>
+         <button class="login-method email">Continue with Email</button>
+
+         <button id="back-btn" class="back-btn">Back</button>
+        </div>
+    </div>
+
     <script>
         window.onload = function() {
             document.getElementById("auth-modal").style.display = "flex";
         };
         
         document.getElementById("continue-btn").onclick = function() {
-        document.getElementById("auth-modal").style.display = "none";
+            document.getElementById("auth-modal").style.display = "none";
+        };
+ 
+        document.getElementById("login-btn").onclick = function() {
+            document.getElementById("auth-modal").style.display = "none";
+        document.getElementById("login-options").style.display = "flex";
+        };
+
+        document.getElementById("signup-btn").onclick = function() {
+            document.getElementById("auth-modal").style.display = "none";
+        document.getElementById("login-options").style.display = "flex";
+        };
+
+        document.getElementById("back-btn").onclick = function() {
+            document.getElementById("login-options").style.display = "none";
+        document.getElementById("auth-modal").style.display = "flex";
         };
 
     </script>
