@@ -86,6 +86,12 @@
             document.getElementById("auth-modal").style.display = "flex";
         };
         
+        if (!localStorage.getItem("stayLoggedOut")) {
+           window.onload = function() {
+             showAuthModal();
+           };
+        }
+
         document.getElementById("continue-btn").onclick = function() {
             document.getElementById("auth-modal").style.display = "none";
         };
