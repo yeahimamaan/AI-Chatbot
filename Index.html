@@ -117,8 +117,17 @@
         };
 
         document.getElementById("back-btn").onclick = function() {
-            document.getElementById("login-options").style.display = "none";
-        document.getElementById("auth-modal").style.display = "flex";
+         var credentialBox = document.getElementById("credential-box");
+         if (credentialBox && credentialBox.style.display === "block") {
+          credentialBox.style.display = "none";
+          document.getElementById("credential-input").value = "";
+          document.querySelector(".google").style.display = "block";
+          document.querySelector(".phone").style.display = "block";
+          document.querySelector(".email").style.display = "block";
+         } else {
+          document.getElementById("login-options").style.display = "none";
+          document.getElementById("auth-modal").style.display = "flex";
+         }
         };
        
         var loginOptions = document.getElementById("login-options");
