@@ -82,6 +82,11 @@
          <button class="login-method phone">Continue with Phone</button>
          <button class="login-method email">Continue with Email</button>
 
+         <div id="credential-box" style="display:none; margin-top:20px;">
+            <input type="text" id="credential-input" placeholder="Enter your credentials" />
+            <button id="continue-credential-btn" style="margin-top:10px;">Continue</button>
+        </div>
+
          <button id="back-btn" class="back-btn">Back</button>
         </div>
     </div>
@@ -115,6 +120,51 @@
             document.getElementById("login-options").style.display = "none";
         document.getElementById("auth-modal").style.display = "flex";
         };
+       
+        var loginOptions = document.getElementById("login-options");
+        var googleBtn = document.querySelector(".google");
+        var phoneBtn = document.querySelector(".phone");
+        var emailBtn = document.querySelector(".email");
+        var credentialBox = document.getElementById("credential-box");
+        var credentialInput = document.getElementById("credential-input");
+        var continueBtn = document.getElementById("continue-credential-btn");
+        var backBtn = document.getElementById("back-btn");
+
+        googleBtn.onclick = function() {
+         credentialBox.style.display = "block";
+         credentialInput.placeholder = "Email or Phone";
+         googleBtn.style.display = "none";
+         phoneBtn.style.display = "none";
+         emailBtn.style.display = "none";
+        }
+
+        phoneBtn.onclick = function() {
+         credentialBox.style.display = "block";
+         credentialInput.placeholder = "Phone number";
+         googleBtn.style.display = "none";
+         phoneBtn.style.display = "none";
+         emailBtn.style.display = "none";
+        }
+
+        emailBtn.onclick = function() {
+         credentialBox.style.display = "block";
+         credentialInput.placeholder = "Email";
+         googleBtn.style.display = "none";
+         phoneBtn.style.display = "none";
+         emailBtn.style.display = "none";
+        }
+
+        continueBtn.onclick = function() {
+         loginOptions.style.display = "none";
+        } 
+
+        backBtn.onclick = function() {
+         credentialBox.style.display = "none";
+         credentialInput.value = "";
+         googleBtn.style.display = "block";
+         phoneBtn.style.display = "block";
+         emailBtn.style.display = "block";
+       }
 
     </script>
     <a href="Artemis.html" id="chat-btn" title="Chat with Artemis">💬</a>
