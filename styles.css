@@ -495,3 +495,27 @@ h1 {
   text-shadow: 0 0 8px rgba(255,255,255,0.4);
 }
 
+#chat-btn {
+  position: fixed;
+  bottom: 30px;       
+  right: 30px;        
+  width: 60px;
+  height: 60px;
+  background-color: none;  
+  color: #5dbc95;
+  font-size: 28px;
+  font-family: Bahnschrift, sans-serif;
+  text-align: center;
+  line-height: 60px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  z-index: 999;
+}
+
+#chat-btn:hover {
+  color: white;
+  text-shadow: 0 0 8px #5dbc95;
+}
+
