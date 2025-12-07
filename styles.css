@@ -353,18 +353,69 @@ h1 {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0,0,0,0.6);
+  background: rgba(0, 0, 0, 0.7);
   align-items: center;
   justify-content: center;
+  backdrop-filter: blur(3px);
 }
 
 .modal-content {
-  background: white;
+  background: #252424;
   padding: 30px;
-  border-radius: 10px;
-  width: 350px;
+  border-radius: 12px;
+  width: 380px;
   text-align: center;
+  border: 2px solid #5dbc95;
+  box-shadow: 0 0 20px rgba(93, 188, 149, 0.3);
   animation: fadeIn 0.3s ease;
+}
+
+.modal-content h2 {
+  color: #5dbc95;
+  margin-bottom: 10px;
+}
+
+.modal-content p {
+  color: white;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.modal-content input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #444;
+  background-color: #1e1e1e;
+  color: white;
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+.modal-content input:focus {
+  outline: none;
+  border-color: #5dbc95;
+  box-shadow: 0 0 8px #5dbc95;
+}
+
+#login-btn,
+#signup-btn {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 8px;
+  background-color: #5dbc95;
+  color: black;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+#login-btn:hover,
+#signup-btn:hover {
+  background-color: #4aa77f;
 }
 
 @keyframes fadeIn {
