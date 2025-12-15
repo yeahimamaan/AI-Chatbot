@@ -39,12 +39,10 @@ app.post("/api/chat", async (req, res) => {
     console.log("📩 Received message:", userMessage);
 
     const apiKey = process.env.GEMINI_API_KEY;
-    console.log("🔑 API Key exists:", !!apiKey);
-    console.log("🔑 API Key length:", apiKey?.length);
 
-    // Correct endpoint: v1beta with gemini-2.5-flash
+    // Using gemini-2.5-flash-lite - might have better rate limits
     const response = await fetch(
-      `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${apiKey}`,
+      `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent?key=${apiKey}`,
       {
         method: "POST",
         headers: {
@@ -60,22 +58,25 @@ app.post("/api/chat", async (req, res) => {
       }
     );
 
-    console.log("📡 Gemini response status:", response.status);
-
     const data = await response.json();
-    console.log("📦 Full Gemini response:", JSON.stringify(data, null, 2));
 
     // Check if there's an error in the response
     if (data.error) {
       console.error("❌ Gemini API error:", data.error);
+      
+      // If it's a quota error, give a helpful message
+      if (data.error.code === 429) {
+        return res.json({ 
+          reply: "⏳ Artemis has used up her daily thinking quota (20 questions/day on free tier). She'll be back at midnight Pacific Time! 🌙" 
+        });
+      }
+      
       return res.json({ reply: `Error: ${data.error.message}` });
     }
 
     const reply =
       data.candidates?.[0]?.content?.parts?.[0]?.text ||
       "Artemis had no response 😔";
-
-    console.log("✅ Final reply:", reply);
 
     res.json({ reply });
 
