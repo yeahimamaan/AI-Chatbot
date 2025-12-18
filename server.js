@@ -40,9 +40,9 @@ app.post("/api/chat", async (req, res) => {
 
     const apiKey = process.env.GEMINI_API_KEY;
 
-    // Using gemini-1.5-pro (FREE and more stable)
+    // Using gemini-2.5-flash-lite - might have better rate limits
     const response = await fetch(
-     `https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=${apiKey}`,
+      `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent?key=${apiKey}`,
       {
         method: "POST",
         headers: {
